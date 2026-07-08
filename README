@@ -2,3 +2,5 @@ In this project we are going to explore Springboot things that we discovered in 
 Following is the sequence in which thhis project has been modified and the topics covered in that
 
     1. HomePage - Basic Java class that helps to understand RESTApis concept.
+    2. ProductServive - GetProductBByID method - used tthe concept of STream API to fetch the product details
+                        from the database.

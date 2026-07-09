@@ -3,10 +3,7 @@ package com.example.SpringBoot_Practice.Controller;
 import com.example.SpringBoot_Practice.Service.ProductService;
 import com.example.SpringBoot_Practice.modal.Product;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,6 +23,27 @@ public class ProductController {
     @GetMapping("/products/{productID}")
     public Product getProductbyID(@PathVariable int productID){
         return productService.getProductById(productID);
+    }
+
+    //Adding product to the list
+    @PostMapping("/addProducts")
+    public String addProducts(@RequestBody Product prod){
+        productService.addProducts(prod);
+        return "Products has been added successfully...";
+    }
+
+    //Updating the existing product
+    @PutMapping("/updateProduct")
+    public String updateProduct(@RequestBody Product prod){
+        productService.updateProduct(prod);
+        return "Product detail has been updated...";
+    }
+
+    //Deleting the product
+    @DeleteMapping("/deleteProduct/{prodID}")
+    public String deleteProduct(@PathVariable int prodID){
+        productService.deleteProduct(prodID);
+        return "Product has been deleted successfully...";
     }
 
 }

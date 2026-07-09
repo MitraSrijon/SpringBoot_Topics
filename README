@@ -4,3 +4,6 @@ Following is the sequence in which thhis project has been modified and the topic
     1. HomePage - Basic Java class that helps to understand RESTApis concept.
     2. ProductServive - GetProductBByID method - used tthe concept of STream API to fetch the product details
                         from the database.
+    3. ProductService - Creating method to add products into the list
+    4. ProductService - Creating method to update the existing products
+    5. ProductService - Deleting the product

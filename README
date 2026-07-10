@@ -7,3 +7,8 @@ Following is the sequence in which thhis project has been modified and the topic
     3. ProductService - Creating method to add products into the list
     4. ProductService - Creating method to update the existing products
     5. ProductService - Deleting the product
+    6. Added the JPA and H2 Database dependencies
+    7. Added the url and driver inside the application.configurattion file
+    8. Created a new package Repository to connect with database
+    9. Created a StudentRepo interface which extends JPARepository and now we will use its objects inside
+       service layer to communicate with the database.
